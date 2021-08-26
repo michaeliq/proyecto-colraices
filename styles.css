@@ -28,6 +28,9 @@ body{
     background-color:#fff;
 }
 
+body::-webkit-scrollbar {display: none;}
+
+
 .contenedor{
     min-width:100%;
     height:auto;
@@ -106,7 +109,7 @@ header nav .nav__lista_enlaces .lista_enlaces__enlaces{
 
 header nav .nav__lista_enlaces .lista_enlaces__enlaces a{
     text-decoration: none;
-    font-size: 15px;
+    font-size: 1em;
     text-transform: uppercase;
     color:#000;
     font-weight: lighter;
@@ -375,7 +378,6 @@ section.destinos{
     width: 100%;
     height: 100vh;
     min-height: 100vh;
-    position: relative;
 }
 
 .destinos__contenedor{
@@ -478,6 +480,9 @@ section.destinos{
     position: relative;
     transition: 0s ease-out;
 }
+
+.carrusel__lista::-webkit-scrollbar {display: none;}
+
 
 .lista__imagen{
     height:100%;
@@ -1059,4 +1064,587 @@ footer{
     text-decoration: none;
     color: #606060;
     font-size: 1.75em;
+}
+
+
+@media (max-width: 480px) {
+
+    header nav .nav__lista_enlaces{
+        justify-content: flex-end;
+    }
+
+    header nav .nav__lista_enlaces .lista_enlaces__enlaces{
+        margin-right: 0;
+        margin-left: 1em;
+    }
+
+
+    header nav .nav__contenedor_logo .logo{
+        border:.18em solid #F0B24A;
+        width:3.5em;
+        height: 3.5em;
+        position: relative;
+    }
+    
+    .nav__contenedor_logo .logo div{
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        background-color: #fff;
+        border:.2em solid #fff;
+        bottom:-.85em;
+        right:-10%
+    }
+    
+    .nav__contenedor_logo .logo div p{
+        font-family: 'Cairo';
+        font-size: .67em;
+        font-weight: 400;
+        color:#606060;
+    }
+
+    section{
+        position: relative;
+    }
+
+    section.principal{
+        top:80px;
+        height: auto;
+    }
+
+    section.principal .principal__contenedor{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column-reverse;
+    }
+
+    .principal__contenedor .contenedor__titulos{
+        width:100%;
+        height: auto;
+    }
+
+    .contenedor__imagen img{
+        width: 100%;
+    }
+
+    section.proceso{
+        top:8em;
+    }
+
+    .proceso__contenedor__separador{
+        display: none;
+    }
+
+    .proceso__contenedor__info{
+        height:auto;
+    }
+
+    .info__tarjetas{
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+        grid-column-gap: 1em;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .tarjetas__tarjeta{
+        height: auto;
+    }
+
+    section.destinos{
+        display:flex;
+        height: 100vh;
+        width:100%;
+        top:16em;
+    }
+
+    .destinos__contenedor__opciones{
+        justify-content: space-between;
+    }
+
+    .carrusel__lista{
+        overflow-x: scroll;
+        justify-content: flex-start;
+    }
+
+    .carrusel__lista .lista__imagen{
+        width:100%;
+        min-width: 100%;
+    }
+
+    .lista__imagen div div {
+        width: 20%;
+    }
+    
+    
+
+    .destinos__contenedor .destinos__contenedor__separador{
+        display: none;
+    }
+
+    section.planes{
+        top:16em;
+    }
+
+    .planes__contenedor .planes__contenedor__posts .posts__tarjeta{
+        display:flex;
+        width:100%;
+        margin-top:2em;
+        margin-bottom: 2em;
+        position: relative;
+        justify-content: center;
+    }
+
+    .planes__contenedor .planes__contenedor__posts .posts__tarjeta .tarjeta__col{
+        margin: 1em 0 1em 0;
+        width:100%
+    }
+
+    .planes__contenedor .planes__contenedor__posts .posts__tarjeta .tarjeta__col:first-child div {
+        width: 100%;
+    }
+
+    .planes__contenedor .planes__contenedor__info p, .planes__contenedor .planes__contenedor__posts .posts__tarjeta .tarjeta__col:first-child .tarjeta__descripcion {
+        text-align: justify;
+    }
+    
+    .planes__contenedor .planes__contenedor__posts .posts__tarjeta:nth-child(odd) .tarjeta__col .tarjeta__imagenBox{
+        transform: translateX(0);
+        border-radius: 0;
+    }
+    
+    .planes__contenedor .planes__contenedor__posts .posts__tarjeta:nth-child(even) .tarjeta__col .tarjeta__imagenBox{
+        border-radius: 0;
+        transform: translateX(0);
+        width: 100%;
+    }
+    
+    .planes__contenedor .planes__contenedor__posts .posts__tarjeta:nth-child(even){
+        flex-direction: column;
+    }
+    
+    .planes__contenedor .planes__contenedor__posts .posts__tarjeta:nth-child(odd){
+        flex-direction: column;
+    }
+
+    section.contacto{
+        top:16em;
+    }
+
+    .contacto__contenedor {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .contacto__contenedor .contacto__col {
+        width: 100%;
+    }
+
+    .contacto__col .contacto__info{
+        border-right: none;
+        justify-content: center;
+    }
+
+    .contacto__info .contacto__info__descripcion{
+        padding: 0 1.5em 0 1.5em;
+    }
+
+    .contacto__col .contacto__formulario{
+        border-left: none;
+        justify-content: center;
+    }
+
+    .contacto__col .contacto__formulario form{
+        padding:0;
+        align-items: center;
+    }
+
+    .contacto__col .contacto__formulario form input{
+        width:90%;
+    }
+
+    .contacto__col .contacto__formulario form button {
+        justify-content: center;
+    }
+
+    footer.footer{
+        top:20em;
+        height: auto;
+    }
+
+    .footer__contenedor .footer__contenedor__imagen {
+        height:8em;
+        margin-bottom:2em
+    }
+
+    .footer__contenedor__logo {
+        height: 6em;
+        margin-bottom: 1em;
+    }
+
+    .footer__contenedor .footer__contenedor__info__bar {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+
+    .footer__contenedor .footer__contenedor__info__bar .bar__hablemos__tarjeta{
+        height: 8em;
+    }
+
+    .footer__contenedor .footer__contenedor__info__bar .bar__menu{
+        height: 8em;
+    }
+
+    .footer__contenedor .footer__contenedor__info__bar div{
+        width:100%;
+        padding:0 1em 0 1em;
+    }
+    
+    .footer__contenedor .footer__contenedor__info__bar .bar__hablemos__tarjeta p:last-child{
+        width: 100%;
+    }
+
+    .footer__contenedor .footer__contenedor__info__bar .bar__redes div{
+        height: 6em;
+        align-items: center;
+    }
+
+    .footer__contenedor .footer__contenedor__info__bar .bar__redes ul{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        width:100%;
+    }
+
+}
+
+@media screen and  (max-width: 800px) {
+
+    header nav .nav__lista_enlaces{
+        justify-content: flex-end;
+    }
+
+    header nav .nav__lista_enlaces .lista_enlaces__enlaces{
+        margin-right: 0;
+        margin-left: 1em;
+    }
+
+
+    header nav .nav__contenedor_logo .logo{
+        border:.18em solid #F0B24A;
+        width:3.5em;
+        height: 3.5em;
+        position: relative;
+    }
+    
+    .nav__contenedor_logo .logo div{
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        background-color: #fff;
+        border:.2em solid #fff;
+        bottom:-.85em;
+        right:-10%
+    }
+    
+    .nav__contenedor_logo .logo div p{
+        font-family: 'Cairo';
+        font-size: .65em;
+        font-weight: 400;
+        color:#606060;
+    }
+
+    section.principal{
+        top:80px;
+        height: auto;
+    }
+
+    section.principal .principal__contenedor{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column-reverse;
+    }
+
+    .principal__contenedor .contenedor__titulos{
+        width:100%;
+        height: auto;
+    }
+
+    .contenedor__imagen img{
+        width: 100%;
+    }
+
+    section.proceso{
+        margin-top:2em;
+    }
+
+    .proceso__contenedor__separador {
+        height: 2em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+        margin: 3em 0 3em 0;
+    }
+
+    .proceso__contenedor__separador div{
+        height: .3em;
+        width:90%;
+        border-radius: .1em;
+    }
+
+    .proceso__contenedor__info{
+        height:auto;
+    }
+
+    .info__tarjetas{
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+        grid-column-gap: 1em;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .tarjetas__tarjeta{
+        height: auto;
+    }
+
+    section.destinos{
+        display:flex;
+        height: 100vh;
+        width:100%;
+        margin-top:16em;
+    }
+
+    .destinos__contenedor__opciones{
+        justify-content: center;
+    }
+
+    .carrusel__lista{
+        overflow-x: scroll;
+        justify-content: flex-start;
+    }
+
+    .carrusel__lista .lista__imagen{
+        width:100%;
+        min-width: 100%;
+    }
+
+    .lista__imagen div div {
+        width: 20%;
+    }
+
+    .destinos__contenedor .destinos__contenedor__separador{
+        display: none;
+    }
+
+    section.planes{
+        margin-top:16em;
+    }
+
+    .planes__contenedor .planes__contenedor__posts .posts__tarjeta{
+        display:flex;
+        width:100%;
+        margin-top:2em;
+        margin-bottom: 2em;
+        position: relative;
+        justify-content: center;
+    }
+
+    .planes__contenedor .planes__contenedor__posts .posts__tarjeta .tarjeta__col{
+        margin: 1em 0 1em 0;
+        width:100%
+    }
+
+    .planes__contenedor .planes__contenedor__posts .posts__tarjeta .tarjeta__col:first-child div {
+        width: 100%;
+    }
+
+    .planes__contenedor .planes__contenedor__info p, .planes__contenedor .planes__contenedor__posts .posts__tarjeta .tarjeta__col:first-child .tarjeta__descripcion {
+        text-align: justify;
+    }
+    
+    .planes__contenedor .planes__contenedor__posts .posts__tarjeta:nth-child(odd) .tarjeta__col .tarjeta__imagenBox{
+        transform: translateX(0);
+        border-radius: 0;
+    }
+    
+    .planes__contenedor .planes__contenedor__posts .posts__tarjeta:nth-child(even) .tarjeta__col .tarjeta__imagenBox{
+        border-radius: 0;
+        transform: translateX(0);
+        width: 100%;
+    }
+    
+    .planes__contenedor .planes__contenedor__posts .posts__tarjeta:nth-child(even){
+        flex-direction: column;
+    }
+    
+    .planes__contenedor .planes__contenedor__posts .posts__tarjeta:nth-child(odd){
+        flex-direction: column;
+    }
+
+    section.contacto{
+        margin-top:0;
+    }
+
+    .contacto__contenedor {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .contacto__contenedor .contacto__col {
+        width: 100%;
+    }
+
+    .contacto__col .contacto__info{
+        border-right: none;
+        justify-content: center;
+    }
+
+    .contacto__info .contacto__info__descripcion{
+        padding: 0 1.5em 0 1.5em;
+    }
+
+    .contacto__col .contacto__formulario{
+        border-left: none;
+        justify-content: center;
+    }
+
+    .contacto__col .contacto__formulario form{
+        padding:0;
+        align-items: center;
+    }
+
+    .contacto__col .contacto__formulario form input{
+        width:90%;
+    }
+
+    .contacto__col .contacto__formulario form button {
+        justify-content: center;
+    }
+
+    footer.footer{
+        margin-top:2em;
+        height: auto;
+    }
+
+    .footer__contenedor .footer__contenedor__imagen {
+        height:8em;
+        margin-bottom:2em
+    }
+
+    .footer__contenedor__logo {
+        height: 6em;
+        margin-bottom: 1em;
+    }
+
+    .footer__contenedor .footer__contenedor__info__bar {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+
+    .footer__contenedor .footer__contenedor__info__bar .bar__hablemos__tarjeta{
+        height: 8em;
+    }
+
+    .footer__contenedor .footer__contenedor__info__bar .bar__menu{
+        height: 8em;
+    }
+
+    .footer__contenedor .footer__contenedor__info__bar div{
+        width:100%;
+        padding:0 1em 0 1em;
+    }
+    
+    .footer__contenedor .footer__contenedor__info__bar .bar__hablemos__tarjeta p:last-child{
+        width: 100%;
+    }
+
+    .footer__contenedor .footer__contenedor__info__bar .bar__redes div{
+        height: 6em;
+        align-items: center;
+    }
+
+    .footer__contenedor .footer__contenedor__info__bar .bar__redes ul{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        width:100%;
+    }
+
+}
+
+@media screen and (min-width: 1600px){
+    html{
+        font-size: 60px;
+    }
+
+    .contenedor header{
+        height:10%;
+    }
+
+    aside{
+        height: calc(100% - 10%);
+        top:10%;
+    }
+
+    header nav .nav__lista_enlaces .lista_enlaces__enlaces a{
+        font-size:1em;
+    }
+
+    carrusel__lista{
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .carrusel__lista .lista__imagen{
+        width:100%;
+        min-width: 15%;
+    }
+
+    .contacto__col .contacto__formulario form input {
+        padding: .6em;
+        color: #606060;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        border: 1px solid #707070;
+        border-radius: 2rem;
+        width: 100%;
+        height: 5%;
+        margin-bottom: 1em;
+        letter-spacing: -1px;
+    }
+
+    .contacto__col .contacto__formulario form input::placeholder{
+        font-size:3em;
+        }
+
+    .contacto__col .contacto__formulario form button {
+            position: relative;
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            padding: 10%;
+            background-color: transparent;
+            border: none;
+            height: 2em;
+        }
+
+    .contacto__col .contacto__formulario form button p {
+            font-size: 5em;
+            color: #606060;
+            font-weight: bold;
+            letter-spacing: -1px;
+        }
+
+    .contacto__col .contacto__formulario form button p:last-child{
+        font-size: 5em;
+    }
+
+    .contacto__info .contacto__info__descripcion{
+        padding: 0 3em 0 3em;
+    }
 }
