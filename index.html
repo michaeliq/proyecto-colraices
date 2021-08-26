@@ -13,12 +13,17 @@
         <header class="header">
             <nav class="header__nav">
                 <div class="nav__contenedor_logo">
-                    <h2 class="logo">logo</h2>
+                        <div class="logo">
+                            <div>
+                                <p>VIAJES</p>
+                                <p>Web 1.0</p>
+                            </div>
+                        </div>
                 </div>
                 <ul class="nav__lista_enlaces">
-                    <li class="lista_enlaces__enlaces"><a href="#">destinos</a></li>
-                    <li class="lista_enlaces__enlaces"><a href="#">planes</a></li>
-                    <li class="lista_enlaces__enlaces"><a href="#">contacto</a></li>
+                    <li class="lista_enlaces__enlaces"><a href="#destinos">destinos</a></li>
+                    <li class="lista_enlaces__enlaces"><a href="#planes">planes</a></li>
+                    <li class="lista_enlaces__enlaces"><a href="#contacto">contacto</a></li>
                 </ul>
             </nav>
         </header>
@@ -40,7 +45,7 @@
         </aside>
         <!-- fin de aside -->
         <!-- comienzo de sección principal -->
-        <section class="principal">
+        <section id ="principal" class="principal">
             <div class="principal__contenedor">
                 <div class="contenedor__titulos">
                     <div class="titulos__h6">
@@ -67,7 +72,7 @@
         </section>
         <!-- fin de seccion principal -->
         <!-- comienzo de sección proceso -->
-        <section class="proceso">
+        <section id="proceso" class="proceso">
             <div class="proceso__contenedor">
                 <div class="proceso__contenedor__separador">
                     <div></div>
@@ -118,7 +123,7 @@
         </section>
         <!-- fin de sección proceso -->
         <!-- comienzo de sección destinos -->
-        <section class="destinos">
+        <section id="destinos" class="destinos">
             <div class="destinos__contenedor">
                 <div class="destinos__contenedor__titulo">
                     <h2>
@@ -232,7 +237,7 @@
         </section>
         <!-- fin de seción destionos -->
         <!-- comienzo de sección planes -->
-        <section class="planes">
+        <section id="planes" class="planes">
             <div class="planes__contenedor">
                 <div class="planes__contenedor__titulos">
                     <p>elige el tipo de</p>
@@ -304,10 +309,80 @@
         </section>
         <!-- fin de sección planes -->
         <!-- comienzo de sección experiencia -->
-        <section class="experiencia"></section>
+        <section id="contacto" class="contacto">
+            <div class="contacto__contenedor">
+                <div class="contacto__col">
+                    <div class="contacto__info">
+                        <div class="contacto__info__subtitulos">
+                            <p>elige el tipo de</p>
+                            <p>experiencia</p>
+                            <p>que quieres vivir</p>
+                        </div>
+                        <div class="contacto__info__descripcion">
+                            <p><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta tenetur animi quis quia at. Molestiae inventore corporis nam sit soluta, consectetur, unde quam delectus vel ipsam fuga officia, amet ab.</span><span>Laudantium, eligendi, maiores doloribus voluptates assumenda tempore aliquam in a at eaque exercitationem repudiandae adipisci repellat. Esse libero fuga ullam, deleniti fugit eius recusandae minus cumque voluptates! Eaque, ullam qui.</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contacto__col">
+                    <div class="contacto__formulario">
+                        <form action="#">
+                            <input type="text" placeholder="Nombre completo">
+                            <input type="email" name="" id="" placeholder="Email">
+                            <input type="tel" name="" id="" placeholder="Numero de contacto">
+                            <button>
+                                <span>
+                                    <p>Completa tu</p>
+                                    <p>reserva</p>
+                                </span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
         <!-- fin de seción experiencia -->
         <!-- comienzo de footer -->
-        <footer class="footer"></footer>
+        <footer class="footer">
+            <div class="footer__contenedor">
+                <div class="footer__contenedor__imagen">
+                    <img src="/img/ciudades2.jpg" alt="">
+                </div>
+                <div class="footer__contenedor__logo">
+                    <div class="logo__footer">
+                        <div>
+                            <p>VIAJES</p>
+                            <p>Web 1.0</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__contenedor__info__bar">
+                    <div class="bar__hablemos__tarjeta">
+                        <p>Hablemos</p>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque ea atque natus! Quis omnis voluptas doloremque a dolore quisquam quae laudantium, rerum tenetur, sequi soluta veniam quo corporis voluptates illum.</p>
+                    </div>
+                    <div class="bar__menu">
+                        <p>Menu</p>
+                        <ul>
+                            <li><a href="#destinos">destinos</a></li>
+                            <li><a href="#planes">planes</a></li>
+                            <li><a href="#contacto">contacto</a></li>
+                        </ul>
+                    </div>
+                    <div class="bar__redes">
+                        <p>Nuestras Redes</p>
+                        <div>
+                            <ul class="redes__sociales_grid">
+                                <li class="lgrid__red_social"><a href=""><i class="fab fa-youtube"></i></a></li>
+                                <li class="lgrid__red_social"><a href=""><i class="fab fa-twitter"></i></a></li>
+                                <li class="lgrid__red_social"><a href=""><i class="fab fa-instagram"></i></a></li>
+                                <li class="lgrid__red_social"><a href=""><i class="fab fa-whatsapp"></i></a></li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </footer>
         <!-- fin de footer -->
     </div>
     <script src="https://kit.fontawesome.com/5b170b8c6d.js" crossorigin="anonymous"></script>
